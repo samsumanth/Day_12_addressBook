@@ -74,9 +74,6 @@ class person
 	}
 }
 
-
-
-
 public class Addressbooksystem 
 {
 	public static void main(String[] args) 
@@ -85,7 +82,7 @@ public class Addressbooksystem
 		String[] arr = new String[7]; 
 		int i;
 		String Fname, Lname, Addr, city, email, phone, zip; 
-		person obj = new person("Ashok", "Patel","xyzArea", "raj", "abc@gmail.com", "333333333","4255");
+		person obj = new person("sam", "sumanth","whitefield", "banglore", "abc123@gmail.com", "0909098889","12434");
 		Fname=obj.getFirstName();
 		Lname=obj.getLastName();
 		Addr=obj.getAddr();
