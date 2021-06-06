@@ -1,0 +1,86 @@
+package addressBook;
+import java.util.*;
+
+class UserDetails
+{
+	Scanner sc = new Scanner(System.in);
+	public String fName,lName;
+	public String Address,city;
+	public String state;
+	public String zip,phone;
+	public String email;
+
+	public void getData()
+	{
+		System.out.println("Enter first name and last name:");
+		fName = sc.next();
+		lName = sc.next();
+		System.out.println("Enter Address:");
+		Address = sc.next();
+		System.out.println("Enter city:");
+		city = sc.next();
+		System.out.println("Enter State:");
+		state = sc.next();
+		System.out.println("Enter zip:");
+		zip = sc.next();
+		System.out.println("Enter phone:");
+		phone = sc.next();
+		System.out.println("Enter Email:");
+		email = sc.next();
+	}
+}
+
+class Address_Book extends UserDetails
+{
+	ArrayList<String> element = new ArrayList<>();
+	HashMap<Integer,String> info = new HashMap<>();
+	public void address_Book_One()
+	{
+		element.add(fName);
+		element.add(lName);
+		element.add(Address);
+		element.add(city);
+		element.add(state);
+		element.add(zip);
+		element.add(phone);
+		element.add(email);
+	
+		System.out.println("Person details:");
+		for (int i = 0; i < element.size(); i++) 
+		{
+			System.out.println(element.get(i));
+		}
+	}
+  
+		public void address_Book_Second()
+		{
+			info.put(1,fName);
+			info.put(2,lName);
+			info.put(3,Address);
+			info.put(4,city);
+			info.put(5,state);
+			info.put(6,zip);
+			info.put(7,phone);
+			info.put(8,email);
+			
+			for ( HashMap.Entry m : info.entrySet() ) 
+			{
+				System.out.println( m.getKey()+"\t"+m.getValue() );
+			}
+		}
+}
+
+public class AddMultiple_AddressBook 
+{
+
+	public static void main(String[] args) 
+	{
+		Address_Book a1 = new Address_Book();
+		a1.getData();
+		a1.address_Book_One();
+		a1.getData();
+		a1.address_Book_Second();
+
+	}
+
+}
